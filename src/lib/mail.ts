@@ -4,14 +4,14 @@ const user = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
 
 export const transporter = nodemailer.createTransport({
-    service: 'gmail', // or your preferred SMTP service
+    service: 'gmail',
     auth: {
-        user,
-        pass,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
 });
 
 export const mailOptions = {
-    from: user,
+    from: process.env.EMAIL_USER,
     to: process.env.EMAIL_TO,
 };

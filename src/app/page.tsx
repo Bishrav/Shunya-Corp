@@ -5,6 +5,7 @@ import { TechScene } from "@/components/canvas/TechScene";
 import { DataStream } from "@/components/canvas/DataStream";
 import { FloatingTech } from "@/components/canvas/FloatingTech";
 import { InteractiveSphere } from "@/components/canvas/InteractiveSphere";
+import { CustomModels } from "@/components/canvas/CustomModels";
 import { CheckCircle2, Zap, Shield, Rocket } from "lucide-react";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <div className="w-full md:w-1/2 h-[500px]">
           <Scene className="w-full h-full">
             <TechScene />
+            <CustomModels />
           </Scene>
         </div>
         <div className="w-full md:w-1/2 text-center md:text-left px-6">
