@@ -3,6 +3,8 @@ import { TextReveal } from "@/components/ui/TextReveal";
 import { Scene } from "@/components/canvas/Scene";
 import { TechScene } from "@/components/canvas/TechScene";
 import { DataStream } from "@/components/canvas/DataStream";
+import { FloatingTech } from "@/components/canvas/FloatingTech";
+import { InteractiveSphere } from "@/components/canvas/InteractiveSphere";
 import { CheckCircle2, Zap, Shield, Rocket } from "lucide-react";
 
 export default function Home() {
@@ -39,6 +41,13 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <h3 className="text-9xl font-bold text-white/5 uppercase tracking-widest">Flow</h3>
         </div>
+      </div>
+
+      {/* Floating Technologies */}
+      <div className="w-full h-[400px] relative overflow-hidden bg-gradient-to-b from-black to-shunya-bg">
+        <Scene className="w-full h-full">
+          <FloatingTech />
+        </Scene>
       </div>
 
       {/* Our Process */}
@@ -88,9 +97,14 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="relative h-[400px] glass rounded-3xl overflow-hidden border border-white/10 flex items-center justify-center p-8 text-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-shunya-cyan/20 to-shunya-purple/20 opacity-30" />
-            <div>
+          <div className="relative h-[400px] glass rounded-3xl overflow-hidden border border-white/10 flex items-center justify-center text-center">
+            <div className="absolute inset-0 z-0">
+              <Scene className="w-full h-full">
+                <InteractiveSphere />
+              </Scene>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-shunya-cyan/10 to-shunya-purple/10 pointer-events-none" />
+            <div className="relative z-10 pointer-events-none">
               <h3 className="text-5xl font-bold font-display text-white mb-2">100%</h3>
               <p className="text-gray-400 uppercase tracking-widest">Client Satisfaction</p>
             </div>

@@ -5,7 +5,7 @@
   --color-shunya-cyan: #00f0ff;
   --color-shunya-purple: #7000df;
   --color-shunya-dark: #0a0a0a;
-  
+
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);
 }
@@ -26,23 +26,26 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: var(--color-shunya-bg); 
+  background: var(--color-shunya-bg);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: var(--color-shunya-purple); 
+  background: var(--color-shunya-purple);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-shunya-cyan); 
+  background: var(--color-shunya-cyan);
 }
 
 /* Glassmorphism */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(3, 0, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: none;
 }
 
 .glass-card {
@@ -56,9 +59,11 @@ body {
 .neon-text-cyan {
   text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
 }
+
 .neon-text-purple {
   text-shadow: 0 0 10px rgba(112, 0, 223, 0.5), 0 0 20px rgba(112, 0, 223, 0.3);
 }
+
 .neon-box-cyan {
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
 }
