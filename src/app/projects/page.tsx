@@ -1,4 +1,9 @@
-'use client';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Our Projects | SHUNYA',
+    description: 'Explore our portfolio of interactive 3D websites, custom web apps, and digital transformation projects.',
+};
 
 import { motion } from 'framer-motion';
 

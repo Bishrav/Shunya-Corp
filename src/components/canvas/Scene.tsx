@@ -2,6 +2,7 @@
 
 import { Canvas } from '@react-three/fiber';
 import { Preload, Environment } from '@react-three/drei';
+import { StarField } from './StarField';
 
 export function Scene({ children, className, ...props }: any) {
     return (
@@ -13,6 +14,7 @@ export function Scene({ children, className, ...props }: any) {
                 {...props}
             >
                 <SetEnvironment />
+                <StarField />
                 {children}
                 <Preload all />
             </Canvas>

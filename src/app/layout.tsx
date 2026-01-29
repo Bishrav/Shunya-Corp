@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 };
 
 import { Navbar } from "@/components/ui/Navbar";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 
 export default function RootLayout({
   children,
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark cursor-none">
       <body
         className={cn(
           inter.variable,
@@ -34,6 +35,7 @@ export default function RootLayout({
           "antialiased bg-shunya-bg text-white min-h-screen font-sans selection:bg-shunya-cyan selection:text-shunya-bg"
         )}
       >
+        <CustomCursor />
         <Navbar />
         <main className="flex flex-col min-h-screen">
           {children}
