@@ -2,7 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { TextReveal } from "@/components/ui/TextReveal";
 import { Scene } from "@/components/canvas/Scene";
 import { TechScene } from "@/components/canvas/TechScene";
-import { GlowingPipeline } from "@/components/canvas/GlowingPipeline";
+import { EnergyWave } from "@/components/canvas/EnergyWave";
 import { FloatingTech } from "@/components/canvas/FloatingTech";
 import { InteractiveSphere } from "@/components/canvas/InteractiveSphere";
 import { CustomModels } from "@/components/canvas/CustomModels";
@@ -35,10 +35,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3D Data Stream Divider */}
-      <div className="w-full h-[300px] relative overflow-hidden">
+      {/* 3D Flow Divider */}
+      <div className="w-full h-[300px] relative overflow-hidden bg-black">
         <Scene className="w-full h-full absolute inset-0">
-          <GlowingPipeline />
+          <EnergyWave />
         </Scene>
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <h3 className="text-9xl font-bold text-white/5 uppercase tracking-widest">Flow</h3>
