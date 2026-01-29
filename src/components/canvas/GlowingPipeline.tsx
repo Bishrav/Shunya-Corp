@@ -31,32 +31,26 @@ export function GlowingPipeline() {
 
     return (
         <group position={[0, -0.5, 0]}>
-            {/* Continuous Pipe Structure 
-            Aligning multiple segments to form a single long pipe.
-            Adjusting scale and rotation to match orientation.
-        */}
-            <group rotation={[0, 0, Math.PI / 2]} scale={[1.5, 1.5, 1.5]}>
-                {/* Center Segment */}
-                <primitive object={pipe.scene.clone()} position={[0, -5, 0]} />
-                <primitive object={pipe.scene.clone()} position={[0, 0, 0]} />
-                <primitive object={pipe.scene.clone()} position={[0, 5, 0]} />
-
-                {/* Extension Segments for full width */}
-                <primitive object={pipe.scene.clone()} position={[0, -10, 0]} />
-                <primitive object={pipe.scene.clone()} position={[0, 10, 0]} />
+            {/* Continuous Pipe Structure - Single Long Thick Pipe */}
+            <group rotation={[0, 0, Math.PI / 2]}>
+                <primitive
+                    object={pipe.scene.clone()}
+                    scale={[3, 20, 3]}
+                    position={[0, 0, 0]}
+                />
             </group>
 
             {/* The Energy Ball */}
             <group ref={ballRef}>
-                <primitive object={ball.scene.clone()} scale={[2.5, 2.5, 2.5]} />
+                <primitive object={ball.scene.clone()} scale={[2, 2, 2]} />
 
                 {/* Inner intense core */}
-                <pointLight ref={lightRef} distance={5} intensity={10} color="#00f0ff" />
+                <pointLight ref={lightRef} distance={5} intensity={15} color="#00f0ff" />
 
                 {/* Outer glow aura */}
                 <mesh>
-                    <sphereGeometry args={[0.8, 32, 32]} />
-                    <meshBasicMaterial color="#00f0ff" transparent opacity={0.3} />
+                    <sphereGeometry args={[1, 32, 32]} />
+                    <meshBasicMaterial color="#00f0ff" transparent opacity={0.4} />
                 </mesh>
             </group>
         </group>
