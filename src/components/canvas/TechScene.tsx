@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber';
 import { Float, Decal, useTexture } from '@react-three/drei';
 
 function TechShape({ position, color, speed }: any) {
-    const mesh = useRef<any>();
+    const mesh = useRef<any>(null);
     const [hovered, setHover] = useState(false);
 
     useFrame((state, delta) => {
