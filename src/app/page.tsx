@@ -6,6 +6,7 @@ import { EnergyWave } from "@/components/canvas/EnergyWave";
 import { FloatingTech } from "@/components/canvas/FloatingTech";
 import { InteractiveSphere } from "@/components/canvas/InteractiveSphere";
 import { CustomModels } from "@/components/canvas/CustomModels";
+import { Robot } from "@/components/canvas/Robot";
 import { CheckCircle2, Zap, Shield, Rocket } from "lucide-react";
 
 export default function Home() {
@@ -18,6 +19,8 @@ export default function Home() {
         <div className="w-full md:w-1/2 h-[500px]">
           <Scene className="w-full h-full">
             <TechScene />
+            {/* Robot Character - Interactive */}
+            <Robot position={[0, -2, 2]} scale={[0.5, 0.5, 0.5]} rotation={[0, -0.5, 0]} />
             <CustomModels />
           </Scene>
         </div>
