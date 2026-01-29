@@ -2,7 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { TextReveal } from "@/components/ui/TextReveal";
 import { Scene } from "@/components/canvas/Scene";
 import { TechScene } from "@/components/canvas/TechScene";
-import { DataStream } from "@/components/canvas/DataStream";
+import { GlowingPipeline } from "@/components/canvas/GlowingPipeline";
 import { FloatingTech } from "@/components/canvas/FloatingTech";
 import { InteractiveSphere } from "@/components/canvas/InteractiveSphere";
 import { CustomModels } from "@/components/canvas/CustomModels";
@@ -38,7 +38,7 @@ export default function Home() {
       {/* 3D Data Stream Divider */}
       <div className="w-full h-[300px] relative overflow-hidden">
         <Scene className="w-full h-full absolute inset-0">
-          <DataStream />
+          <GlowingPipeline />
         </Scene>
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <h3 className="text-9xl font-bold text-white/5 uppercase tracking-widest">Flow</h3>
