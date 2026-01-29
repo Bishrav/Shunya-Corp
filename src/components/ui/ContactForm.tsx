@@ -52,7 +52,7 @@ export function ContactForm() {
                     <input
                         {...register('name')}
                         className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-shunya-cyan transition-colors"
-                        placeholder="John Doe"
+                        placeholder="Shunya"
                     />
                     {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name.message}</p>}
                 </div>
@@ -62,7 +62,7 @@ export function ContactForm() {
                     <input
                         {...register('email')}
                         className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-shunya-cyan transition-colors"
-                        placeholder="john@example.com"
+                        placeholder="shunya@gmail.com"
                     />
                     {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>}
                 </div>

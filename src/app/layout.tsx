@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 
 import { Navbar } from "@/components/ui/Navbar";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { Footer } from "@/components/ui/Footer";
 
 export default function RootLayout({
   children,
@@ -40,6 +41,7 @@ export default function RootLayout({
         <main className="flex flex-col min-h-screen">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
