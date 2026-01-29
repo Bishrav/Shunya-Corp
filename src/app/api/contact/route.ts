@@ -9,6 +9,17 @@ export async function POST(request: Request) {
     }
 
     try {
+        if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+            console.log("----------------------------------------------------");
+            console.log("⚠️  MOCK EMAIL SEND (Credentials invalid/missing) ⚠️");
+            console.log(`To: ${process.env.EMAIL_TO}`);
+            console.log(`Subject: New Contact Request from ${data.name}`);
+            console.log(`Message: ${data.message}`);
+            console.log("----------------------------------------------------");
+            // Return success to simulate working form for demo
+            return NextResponse.json({ success: true });
+        }
+
         await transporter.sendMail({
             ...mailOptions,
             subject: `New Contact Request from ${data.name}`,
