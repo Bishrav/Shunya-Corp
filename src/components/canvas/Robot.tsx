@@ -1,113 +1,74 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
-import { useGraph } from '@react-three/fiber';
 import { SkeletonUtils } from 'three-stdlib';
 import * as THREE from 'three';
 
-// Robot model URL from official Three.js repo
+// Robot model URL
 const MODEL_URL = "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/models/gltf/RobotExpressive/RobotExpressive.glb";
 
-export function Robot(props: any) {
+type RobotProps = {
+    action?: string; // Action to play
+    [key: string]: any; // Other props (position, scale, etc.)
+}
+
+export function Robot({ action = 'Walking', ...props }: RobotProps) {
     const group = useRef<THREE.Group>(null);
     const { scene, animations } = useGLTF(MODEL_URL);
-    // Clone scene to allow multiple instances if needed and avoid mutation issues
     const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
     const { actions } = useAnimations(animations, group);
 
-    const [currentAction, setCurrentAction] = useState('Walking');
+    // Track previous action to fade out
+    const previousAction = useRef<string | null>(null);
 
     useEffect(() => {
-        // Initial Animation
-        const action = actions[currentAction];
-        if (action) {
-            action.reset().fadeIn(0.5).play();
+        const currentActionName = action;
+        const newAction = actions[currentActionName];
+
+        if (!newAction) {
+            console.warn(`Robot: Action "${currentActionName}" not found.`);
+            return;
         }
 
-        return () => {
-            // Cleanup
-            action?.fadeOut(0.5);
-        };
-    }, [currentAction, actions]);
+        // Handle transition
+        if (previousAction.current && previousAction.current !== currentActionName) {
+            const oldAction = actions[previousAction.current];
+            oldAction?.fadeOut(0.5);
+        }
 
-    const playEmote = () => {
-        const emotes = ['Jump', 'Yes', 'No', 'Wave', 'Punch', 'ThumbsUp', 'Dance'];
-        const randomEmote = emotes[Math.floor(Math.random() * emotes.length)];
+        // Reset and play new action
+        // Use reset() ensures it starts from beginning if it was played before
+        // fadeIn ensures smooth blend
+        newAction.reset().fadeIn(0.5).play();
 
-        // Don't interrupt if already doing something fun, or force it?
-        // Let's force it for responsiveness
-
-        const newAction = actions[randomEmote];
-        const oldAction = actions[currentAction];
-
-        if (newAction && oldAction) {
-            oldAction.fadeOut(0.2);
-            newAction.reset().fadeIn(0.2).play();
-
+        // Loop settings based on action type could be handled here if needed
+        // For now, let typical loops happen (Walking, Dance loop). 
+        // Some might be oneshots (Jump), but usually standard behavior is fine or controlled by parent resetting to Idle.
+        // For continuous control, we usually want looping.
+        if (['Death', 'Sitting', 'Standing'].includes(currentActionName)) {
             newAction.clampWhenFinished = true;
             newAction.loop = THREE.LoopOnce;
-
-            // Listen for finish to return to base state
-            const onFinished = (e: any) => {
-                if (e.action === newAction) {
-                    newAction.fadeOut(0.2);
-                    const base = actions['Idle']; // Return to Idle after emote
-                    if (base) {
-                        base.reset().fadeIn(0.2).play();
-                        setCurrentAction('Idle');
-                    }
-                    // Remove listener
-                    // mixer is internal to useAnimations, but we can access it if needed
-                    // easier way with state in React is tricky because of the event listener closure
-                }
-            };
-
-            // The mixer is accessible through actions[name].getMixer()
-            newAction.getMixer().addEventListener('finished', onFinished);
-
-            // Update state purely for tracking (won't re-trigger the effect above because handle manually)
-            // actually, simpler logic:
+        } else if (['Jump', 'Punch', 'Yes', 'No', 'Wave', 'ThumbsUp'].includes(currentActionName)) {
+            // Optional: make these one-shots if desired, but for a "Showcase" continuous looping might be funny/okay
+            // or better, one-shot then return to Idle? 
+            // If parent controls state, parent should switch back to Idle after X seconds?
+            // PROPOSAL: Let's just play them. If they loop, they loop.
+            // Actually, RobotExpressive "Jump" usually loops in a weird way if not careful.
+            // Let's force loop for Dance/Walking/Run, OneShot for others?
+            // For simplicity in this iteration, let's stick to default gltf settings or force loop.
+            // Most RobotExpressive animations are loops except Death.
         }
-    };
 
-    // Simpler click handler using state effect would be better but let's do imperative for transitions
-    const handleClick = (e: any) => {
-        e.stopPropagation();
-        const emotes = ['Jump', 'Wave', 'ThumbsUp', 'Dance', 'Punch'];
-        const next = emotes[Math.floor(Math.random() * emotes.length)];
+        previousAction.current = currentActionName;
 
-        const outgoing = actions[currentAction];
-        const incoming = actions[next];
-
-        if (outgoing && incoming) {
-            outgoing.fadeOut(0.5);
-            incoming.reset().fadeIn(0.5).play();
-
-            incoming.clampWhenFinished = true;
-            incoming.loop = THREE.LoopOnce;
-
-            incoming.getMixer().addEventListener('finished', () => {
-                // Return to walking or idle
-                const base = 'Walking';
-                const baseAction = actions[base];
-                if (baseAction) {
-                    incoming.fadeOut(0.5);
-                    baseAction.reset().fadeIn(0.5).play();
-                    setCurrentAction(base);
-                }
-            });
-
-            setCurrentAction(next);
-        }
-    };
-
+        return () => {
+            // No cleanup needed specifically here as next effect run handles fadeOut
+        };
+    }, [action, actions]);
 
     return (
-        <group ref={group} {...props} dispose={null} onClick={handleClick}
-            onPointerOver={() => document.body.style.cursor = 'pointer'}
-            onPointerOut={() => document.body.style.cursor = 'auto'}
-        >
+        <group ref={group} {...props} dispose={null}>
             <primitive object={clone} />
         </group>
     );
