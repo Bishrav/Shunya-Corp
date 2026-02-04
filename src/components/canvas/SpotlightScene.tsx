@@ -6,8 +6,8 @@ import { useTexture } from '@react-three/drei';
 import { PLYLoader } from 'three-stdlib';
 import * as THREE from 'three';
 
-const TEXTURE_URL = "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/disturb.jpg";
-const MODEL_URL = "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/models/ply/binary/Lucy100k.ply";
+const TEXTURE_URL = "/textures/disturb.jpg";
+const MODEL_URL = "/models/Lucy100k.ply";
 
 export function SpotlightScene() {
     // Load texture
