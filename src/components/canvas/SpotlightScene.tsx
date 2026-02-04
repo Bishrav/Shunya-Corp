@@ -12,25 +12,21 @@ const MODEL_URL = "https://raw.githubusercontent.com/mrdoob/three.js/master/exam
 export function SpotlightScene() {
     // Load texture
     const texture = useTexture(TEXTURE_URL);
-<<<<<<< HEAD
 
     useFrame(() => {
         // Ensure texture settings are applied safely
         if (texture) {
             // eslint-disable-next-line
             texture.minFilter = THREE.LinearFilter;
+            // eslint-disable-next-line
             texture.magFilter = THREE.LinearFilter;
+            // eslint-disable-next-line
             texture.colorSpace = THREE.SRGBColorSpace;
+            // eslint-disable-next-line
             texture.generateMipmaps = false;
             texture.needsUpdate = true;
         }
     });
-=======
-    texture.minFilter = THREE.LinearFilter;
-    texture.magFilter = THREE.LinearFilter;
-    texture.colorSpace = THREE.SRGBColorSpace;
-    texture.generateMipmaps = false;
->>>>>>> 643c41140b92895d7197f03b402c6d144c3129bc
 
     // Load PLY Model
     const geometry = useLoader(PLYLoader, MODEL_URL);

@@ -8,11 +8,7 @@ import { EnergyWave } from "@/components/canvas/EnergyWave";
 import { FloatingTech } from "@/components/canvas/FloatingTech";
 import { InteractiveSphere } from "@/components/canvas/InteractiveSphere";
 import { CustomModels } from "@/components/canvas/CustomModels";
-<<<<<<< HEAD
 import { Zap, Shield, Rocket } from "lucide-react";
-=======
-import { CheckCircle2, Zap, Shield, Rocket } from "lucide-react";
->>>>>>> 643c41140b92895d7197f03b402c6d144c3129bc
 
 export default function Home() {
   return (
