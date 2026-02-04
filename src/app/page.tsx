@@ -32,7 +32,7 @@ export default function Home() {
           </TextReveal>
           <TextReveal>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0">
-              Recognized as the <strong>best IT company in Nepal</strong>, SHUNYA bridges the gap between imagination and reality with cutting-edge <strong>website building</strong>, app development, and immersive 3D experiences.
+              Recognized as the <strong>best IT company in Nepal</strong>, <strong>Shunya Development IT Company</strong> bridges the gap between imagination and reality with cutting-edge <strong>website building</strong>, app development, and immersive 3D experiences.
             </p>
           </TextReveal>
         </div>

@@ -17,13 +17,9 @@ export function SpotlightScene() {
         if (texture) {
             // eslint-disable-next-line react-hooks/immutability
             texture.minFilter = THREE.LinearFilter;
-            // eslint-disable-next-line react-hooks/immutability
             texture.magFilter = THREE.LinearFilter;
-            // eslint-disable-next-line react-hooks/immutability
             texture.colorSpace = THREE.SRGBColorSpace;
-            // eslint-disable-next-line react-hooks/immutability
             texture.generateMipmaps = false;
-            // eslint-disable-next-line react-hooks/immutability
             texture.needsUpdate = true;
         }
     }, [texture]);
