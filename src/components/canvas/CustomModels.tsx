@@ -5,8 +5,15 @@ import { useFrame } from '@react-three/fiber';
 import { useRef, useState } from 'react';
 import * as THREE from 'three';
 
-function Model({ url, position, scale = 1, rotation = [0, 0, 0] }: any) {
-    const { scene } = useGLTF(url) as any;
+interface ModelProps {
+    url: string;
+    position?: [number, number, number];
+    scale?: number;
+    rotation?: [number, number, number];
+}
+
+function Model({ url, position, scale = 1, rotation = [0, 0, 0] }: ModelProps) {
+    const { scene } = useGLTF(url);
     const mesh = useRef<THREE.Group>(null);
     const [hovered, setHover] = useState(false);
 

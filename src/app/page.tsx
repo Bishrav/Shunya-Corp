@@ -1,4 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
+import { RobotShowcase } from "@/components/sections/RobotShowcase";
+import { SpotlightSection } from "@/components/sections/SpotlightSection";
 import { TextReveal } from "@/components/ui/TextReveal";
 import { Scene } from "@/components/canvas/Scene";
 import { TechScene } from "@/components/canvas/TechScene";
@@ -6,8 +8,7 @@ import { EnergyWave } from "@/components/canvas/EnergyWave";
 import { FloatingTech } from "@/components/canvas/FloatingTech";
 import { InteractiveSphere } from "@/components/canvas/InteractiveSphere";
 import { CustomModels } from "@/components/canvas/CustomModels";
-import { Robot } from "@/components/canvas/Robot";
-import { CheckCircle2, Zap, Shield, Rocket } from "lucide-react";
+import { Zap, Shield, Rocket } from "lucide-react";
 
 export default function Home() {
   return (
@@ -19,8 +20,7 @@ export default function Home() {
         <div className="w-full md:w-1/2 h-[500px]">
           <Scene className="w-full h-full">
             <TechScene />
-            {/* Robot Character - Interactive */}
-            <Robot position={[0, -2, 2]} scale={[0.5, 0.5, 0.5]} rotation={[0, -0.5, 0]} />
+            {/* Robot removed from here, moved to dedicated showcase */}
             <CustomModels />
           </Scene>
         </div>
@@ -37,6 +37,12 @@ export default function Home() {
           </TextReveal>
         </div>
       </section>
+
+      {/* Spotlight Feature */}
+      <SpotlightSection />
+
+      {/* Robot Showcase Section */}
+      <RobotShowcase />
 
       {/* 3D Flow Divider */}
       <div className="w-full h-[300px] relative overflow-hidden bg-black">

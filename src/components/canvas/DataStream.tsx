@@ -3,7 +3,8 @@
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { CatmullRomCurve3, Vector3 } from 'three';
-import { Tube, MeshDistortMaterial, Float } from '@react-three/drei';
+import { Tube } from '@react-three/drei';
+import * as THREE from 'three';
 
 export function DataStream() {
     const curve = new CatmullRomCurve3([
@@ -14,7 +15,7 @@ export function DataStream() {
         new Vector3(-10, 0, 0),
     ]);
 
-    const ballRef = useRef<any>(null);
+    const ballRef = useRef<THREE.Mesh>(null);
 
     useFrame((state) => {
         if (ballRef.current) {

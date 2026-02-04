@@ -4,8 +4,10 @@ import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial } from '@react-three/drei';
 
+import * as THREE from 'three';
+
 export function InteractiveSphere() {
-    const mesh = useRef<any>(null);
+    const mesh = useRef<THREE.Mesh>(null);
     const [hovered, setHover] = useState(false);
 
     useFrame((state, delta) => {

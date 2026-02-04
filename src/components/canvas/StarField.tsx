@@ -3,11 +3,12 @@
 import { useState, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
-// @ts-ignore
+import * as THREE from 'three';
+
 import * as random from 'maath/random/dist/maath-random.esm';
 
-export function StarField(props: any) {
-    const ref = useRef<any>(null);
+export function StarField(props: Record<string, unknown>) {
+    const ref = useRef<THREE.Points>(null);
     const [sphere] = useState(() => random.inSphere(new Float32Array(6000), { radius: 1.5 }));
 
     useFrame((state, delta) => {

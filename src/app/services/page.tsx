@@ -7,9 +7,7 @@ import {
     Bot,
     BarChart3,
     Layers,
-    Cpu,
-    Globe,
-    Database
+    Globe
 } from 'lucide-react';
 
 const services = [

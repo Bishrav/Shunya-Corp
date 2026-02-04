@@ -1,0 +1,51 @@
+﻿
+> web@0.1.0 lint
+> eslint
+
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx
+  15:24  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx:15:24
+  13 |         const temp = new Float32Array(count * 3);
+  14 |         for (let i = 0; i < count; i++) {
+> 15 |             const x = (Math.random() - 0.5) * 50; // Spread wide
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  16 |             const y = (Math.random() - 0.5) * 2;  // Narrow height
+  17 |             const z = (Math.random() - 0.5) * 2;  // Narrow depth
+  18 |  react-hooks/purity
+  16:24  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx:16:24
+  14 |         for (let i = 0; i < count; i++) {
+  15 |             const x = (Math.random() - 0.5) * 50; // Spread wide
+> 16 |             const y = (Math.random() - 0.5) * 2;  // Narrow height
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  17 |             const z = (Math.random() - 0.5) * 2;  // Narrow depth
+  18 |
+  19 |             temp[i * 3] = x;                       react-hooks/purity
+  17:24  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx:17:24
+  15 |             const x = (Math.random() - 0.5) * 50; // Spread wide
+  16 |             const y = (Math.random() - 0.5) * 2;  // Narrow height
+> 17 |             const z = (Math.random() - 0.5) * 2;  // Narrow depth
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  18 |
+  19 |             temp[i * 3] = x;
+  20 |             temp[i * 3 + 1] = y;                                react-hooks/purity
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\SpotlightScene.tsx
+  21:13  warning  Unused eslint-disable directive (no problems were reported)
+  23:13  warning  Unused eslint-disable directive (no problems were reported)
+  25:13  warning  Unused eslint-disable directive (no problems were reported)
+
+Γ£û 6 problems (3 errors, 3 warnings)
+  0 errors and 3 warnings potentially fixable with the `--fix` option.
+

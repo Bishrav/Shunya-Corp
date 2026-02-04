@@ -2,10 +2,17 @@
 
 import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Float, Decal, useTexture } from '@react-three/drei';
+import { Float } from '@react-three/drei';
+import * as THREE from 'three';
 
-function TechShape({ position, color, speed }: any) {
-    const mesh = useRef<any>(null);
+interface TechShapeProps {
+    position: [number, number, number];
+    color: string;
+    speed: number;
+}
+
+function TechShape({ position, color, speed }: TechShapeProps) {
+    const mesh = useRef<THREE.Mesh>(null);
     const [hovered, setHover] = useState(false);
 
     useFrame((state, delta) => {

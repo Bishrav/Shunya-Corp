@@ -13,7 +13,7 @@ const LANGUAGES = [
 function FloatingWord({ word, position, color }: { word: string, position: [number, number, number], color: string }) {
     const mesh = useRef<THREE.Mesh>(null);
 
-    useFrame(({ clock }) => {
+    useFrame(() => {
         if (mesh.current) {
             mesh.current.lookAt(0, 0, 10);
         }

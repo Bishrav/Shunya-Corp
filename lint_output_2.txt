@@ -1,0 +1,35 @@
+﻿
+> web@0.1.0 lint
+> eslint
+
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx
+  15:13  warning  Unused eslint-disable directive (no problems were reported from 'react-hooks/exhaustive-deps')
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\Robot.tsx
+  13:20  error    Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+  52:13  warning  Unused eslint-disable directive (no problems were reported)
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\SpotlightScene.tsx
+  19:13  error  Error: This value cannot be modified
+
+Modifying a value returned from a hook is not allowed. Consider moving the modification into the hook where the value is constructed.
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\SpotlightScene.tsx:19:13
+  17 |         // Ensure texture settings are applied safely
+  18 |         if (texture) {
+> 19 |             texture.minFilter = THREE.LinearFilter;
+     |             ^^^^^^^ `texture` cannot be modified
+  20 |             texture.magFilter = THREE.LinearFilter;
+  21 |             texture.colorSpace = THREE.SRGBColorSpace;
+  22 |             texture.generateMipmaps = false;  react-hooks/immutability
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\StarField.tsx
+  10:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\TechScene.tsx
+  14:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 6 problems (4 errors, 2 warnings)
+  0 errors and 2 warnings potentially fixable with the `--fix` option.
+

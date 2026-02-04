@@ -16,6 +16,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "SHUNYA | Engineering Interactive Digital Realities",
   description: "SHUNYA is a technology studio specializing in interactive 3D websites, AI, and futuristic digital transformation.",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo.png',
+  },
 };
 
 import { Navbar } from "@/components/ui/Navbar";

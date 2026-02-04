@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -33,8 +34,9 @@ export function Navbar() {
             )}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
-                <Link href="/" className="text-2xl font-bold font-display tracking-wider text-white">
-                    SHUNYA<span className="text-shunya-cyan">.</span>
+                <Link href="/" className="flex items-center gap-2 text-2xl font-bold font-display tracking-wider text-white">
+                    <Image src="/logo.png" alt="Shunya Logo" width={40} height={40} className="w-10 h-10 object-contain" />
+                    <span>SHUNYA<span className="text-shunya-cyan">.</span></span>
                 </Link>
 
                 {/* Desktop Nav */}

@@ -1,0 +1,152 @@
+﻿
+> web@0.1.0 lint
+> eslint
+
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\app\api\contact\route.ts
+  36:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\app\page.tsx
+  11:10  warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\app\services\page.tsx
+  10:5  warning  'Cpu' is defined but never used       @typescript-eslint/no-unused-vars
+  12:5  warning  'Database' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\CustomModels.tsx
+  8:68  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  9:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\DataStream.tsx
+   6:16  warning  'MeshDistortMaterial' is defined but never used  @typescript-eslint/no-unused-vars
+   6:37  warning  'Float' is defined but never used                @typescript-eslint/no-unused-vars
+  17:28  error    Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx
+  15:24  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx:15:24
+  13 |         const temp = new Float32Array(count * 3);
+  14 |         for (let i = 0; i < count; i++) {
+> 15 |             const x = (Math.random() - 0.5) * 50; // Spread wide
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  16 |             const y = (Math.random() - 0.5) * 2;  // Narrow height
+  17 |             const z = (Math.random() - 0.5) * 2;  // Narrow depth
+  18 |  react-hooks/purity
+  16:24  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx:16:24
+  14 |         for (let i = 0; i < count; i++) {
+  15 |             const x = (Math.random() - 0.5) * 50; // Spread wide
+> 16 |             const y = (Math.random() - 0.5) * 2;  // Narrow height
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  17 |             const z = (Math.random() - 0.5) * 2;  // Narrow depth
+  18 |
+  19 |             temp[i * 3] = x;                       react-hooks/purity
+  17:24  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\EnergyWave.tsx:17:24
+  15 |             const x = (Math.random() - 0.5) * 50; // Spread wide
+  16 |             const y = (Math.random() - 0.5) * 2;  // Narrow height
+> 17 |             const z = (Math.random() - 0.5) * 2;  // Narrow depth
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  18 |
+  19 |             temp[i * 3] = x;
+  20 |             temp[i * 3 + 1] = y;                                react-hooks/purity
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\FloatingTech.tsx
+  16:17  warning  'clock' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\InteractiveSphere.tsx
+  8:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\Robot.tsx
+  13:20  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-explicit-any
+  50:13  error  Error: This value cannot be modified
+
+Modifying a value returned from a hook is not allowed. Consider moving the modification into the hook where the value is constructed.
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\Robot.tsx:50:13
+  48 |         // For continuous control, we usually want looping.
+  49 |         if (['Death', 'Sitting', 'Standing'].includes(currentActionName)) {
+> 50 |             newAction.clampWhenFinished = true;
+     |             ^^^^^^^^^ `actions` cannot be modified
+  51 |             newAction.loop = THREE.LoopOnce;
+  52 |         } else if (['Jump', 'Punch', 'Yes', 'No', 'Wave', 'ThumbsUp'].includes(currentActionName)) {
+  53 |             // Optional: make these one-shots if desired, but for a "Showcase" continuous looping might be funny/okay  react-hooks/immutability
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\Scene.tsx
+  7:58  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\SpotlightScene.tsx
+  15:5  error  Error: This value cannot be modified
+
+Modifying a value returned from a hook is not allowed. Consider moving the modification into the hook where the value is constructed.
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\SpotlightScene.tsx:15:5
+  13 |     // Load texture
+  14 |     const texture = useTexture(TEXTURE_URL);
+> 15 |     texture.minFilter = THREE.LinearFilter;
+     |     ^^^^^^^ value cannot be modified
+  16 |     texture.magFilter = THREE.LinearFilter;
+  17 |     texture.colorSpace = THREE.SRGBColorSpace;
+  18 |     texture.generateMipmaps = false;  react-hooks/immutability
+  16:5  error  Error: This value cannot be modified
+
+Modifying a value returned from a hook is not allowed. Consider moving the modification into the hook where the value is constructed.
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\SpotlightScene.tsx:16:5
+  14 |     const texture = useTexture(TEXTURE_URL);
+  15 |     texture.minFilter = THREE.LinearFilter;
+> 16 |     texture.magFilter = THREE.LinearFilter;
+     |     ^^^^^^^ value cannot be modified
+  17 |     texture.colorSpace = THREE.SRGBColorSpace;
+  18 |     texture.generateMipmaps = false;
+  19 |                      react-hooks/immutability
+  17:5  error  Error: This value cannot be modified
+
+Modifying a value returned from a hook is not allowed. Consider moving the modification into the hook where the value is constructed.
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\SpotlightScene.tsx:17:5
+  15 |     texture.minFilter = THREE.LinearFilter;
+  16 |     texture.magFilter = THREE.LinearFilter;
+> 17 |     texture.colorSpace = THREE.SRGBColorSpace;
+     |     ^^^^^^^ value cannot be modified
+  18 |     texture.generateMipmaps = false;
+  19 |
+  20 |     // Load PLY Model                                             react-hooks/immutability
+  18:5  error  Error: This value cannot be modified
+
+Modifying a value returned from a hook is not allowed. Consider moving the modification into the hook where the value is constructed.
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\SpotlightScene.tsx:18:5
+  16 |     texture.magFilter = THREE.LinearFilter;
+  17 |     texture.colorSpace = THREE.SRGBColorSpace;
+> 18 |     texture.generateMipmaps = false;
+     |     ^^^^^^^ value cannot be modified
+  19 |
+  20 |     // Load PLY Model
+  21 |     const geometry = useLoader(PLYLoader, MODEL_URL);                                   react-hooks/immutability
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\StarField.tsx
+   6:1   error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   9:34  error  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+  10:24  error  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\canvas\TechScene.tsx
+  5:17  warning  'Decal' is defined but never used         @typescript-eslint/no-unused-vars
+  5:24  warning  'useTexture' is defined but never used    @typescript-eslint/no-unused-vars
+  7:48  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  8:25  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\USER\OneDrive\Desktop\ShunyaCorp\src\components\sections\SpotlightSection.tsx
+  3:10  warning  'Scene' is defined but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 29 problems (20 errors, 9 warnings)
+

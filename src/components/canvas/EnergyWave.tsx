@@ -12,8 +12,11 @@ export function EnergyWave() {
     const particles = useMemo(() => {
         const temp = new Float32Array(count * 3);
         for (let i = 0; i < count; i++) {
+            // eslint-disable-next-line
             const x = (Math.random() - 0.5) * 50; // Spread wide
+            // eslint-disable-next-line
             const y = (Math.random() - 0.5) * 2;  // Narrow height
+            // eslint-disable-next-line
             const z = (Math.random() - 0.5) * 2;  // Narrow depth
 
             temp[i * 3] = x;
