@@ -36,9 +36,9 @@ export function Footer() {
                     <div>
                         <h4 className="text-lg font-bold text-white mb-6">Contact</h4>
                         <ul className="space-y-4 text-gray-400">
-                            <li>shunya@gmail.com</li>
-                            <li>+1 (555) 123-4567</li>
-                            <li>Silicon Valley, CA</li>
+                            <li>shunyaaa025@gmail.com</li>
+                            <li>9840700349</li>
+                            <li>Buddhanagar, Kathmandu, Nepal</li>
                         </ul>
                     </div>
                 </div>
