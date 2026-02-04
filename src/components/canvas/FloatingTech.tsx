@@ -26,7 +26,6 @@ function FloatingWord({ word, position, color }: { word: string, position: [numb
                 position={position}
                 fontSize={0.5}
                 color={color}
-                font="https://fonts.gstatic.com/s/spacegrotesk/v13/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj49.woff"
                 anchorX="center"
                 anchorY="middle"
             >
