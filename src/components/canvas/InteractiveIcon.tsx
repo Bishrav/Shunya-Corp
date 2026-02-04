@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber';
 import { Float } from '@react-three/drei';
 import * as THREE from 'three';
 
-type ShapeType = 'sphere' | 'box' | 'torus' | 'octahedron' | 'icosahedron' | 'cone';
+export type ShapeType = 'sphere' | 'box' | 'torus' | 'octahedron' | 'icosahedron' | 'cone';
 
 interface InteractiveIconProps {
     shape: ShapeType;

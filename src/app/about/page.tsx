@@ -54,7 +54,7 @@ export default function About() {
                 >
                     <h2 className="text-3xl font-bold font-display mb-4 text-white">Our Vision</h2>
                     <p className="text-gray-300 leading-relaxed text-lg">
-                        To maintain a state of "Shunya" (Zero) — the point of infinite potential. We believe the web should be an immersive canvas, unrestricted by traditional 2D boundaries.
+                        To maintain a state of &quot;Shunya&quot; (Zero) — the point of infinite potential. We believe the web should be an immersive canvas, unrestricted by traditional 2D boundaries.
                     </p>
                 </motion.div>
                 <motion.div
@@ -64,7 +64,7 @@ export default function About() {
                 >
                     <h2 className="text-3xl font-bold font-display mb-4 text-white">Our Stack</h2>
                     <p className="text-gray-300 leading-relaxed text-lg">
-                        We don't just use frameworks; we master them. Next.js for performance, Three.js for immersion, and Python/Node.js for intelligent backends.
+                        We don&apos;t just use frameworks; we master them. Next.js for performance, Three.js for immersion, and Python/Node.js for intelligent backends.
                     </p>
                 </motion.div>
             </div>

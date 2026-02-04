@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { useTexture } from '@react-three/drei';
 import { PLYLoader } from 'three-stdlib';
@@ -13,20 +13,15 @@ export function SpotlightScene() {
     // Load texture
     const texture = useTexture(TEXTURE_URL);
 
-    useFrame(() => {
-        // Ensure texture settings are applied safely
+    useEffect(() => {
         if (texture) {
-            // eslint-disable-next-line
             texture.minFilter = THREE.LinearFilter;
-            // eslint-disable-next-line
             texture.magFilter = THREE.LinearFilter;
-            // eslint-disable-next-line
             texture.colorSpace = THREE.SRGBColorSpace;
-            // eslint-disable-next-line
             texture.generateMipmaps = false;
             texture.needsUpdate = true;
         }
-    });
+    }, [texture]);
 
     // Load PLY Model
     const geometry = useLoader(PLYLoader, MODEL_URL);

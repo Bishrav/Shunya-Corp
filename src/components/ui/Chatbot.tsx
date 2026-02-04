@@ -48,7 +48,7 @@ export function Chatbot() {
             setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
         } catch (error) {
             console.error(error);
-            setMessages(prev => [...prev, { role: 'assistant', content: "I'm having trouble connecting to the server. Please try again later." }]);
+            setMessages(prev => [...prev, { role: 'assistant', content: "I&apos;m having trouble connecting to the server. Please try again later." }]);
         } finally {
             setIsLoading(false);
         }

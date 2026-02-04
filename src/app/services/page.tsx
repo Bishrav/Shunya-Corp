@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
-import { InteractiveIcon } from '@/components/canvas/InteractiveIcon';
+import { InteractiveIcon, ShapeType } from '@/components/canvas/InteractiveIcon';
 
 export default function Services() {
     // Services Data with 3D Shape mappings
@@ -84,7 +84,7 @@ export default function Services() {
                                 <pointLight position={[-10, -10, -10]} intensity={0.5} />
                                 <Suspense fallback={null}>
                                     <InteractiveIcon
-                                        shape={service.shape as any}
+                                        shape={service.shape as ShapeType}
                                         color={service.color}
                                     />
                                 </Suspense>
