@@ -20,8 +20,7 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-32">
                 <div className="order-2 lg:order-1">
                     <h1 className="text-4xl md:text-6xl font-bold font-display mb-6 text-white leading-tight">
-                        We Engineer <br />
-                        <span className="text-shunya-cyan">Digital Reality</span>
+                        About <span className="text-shunya-cyan">SHUNYA</span>
                     </h1>
                     <p className="text-xl text-gray-400 leading-relaxed mb-8">
                         Shunya is more than an IT company. We are a digital forge where code meets creativity.

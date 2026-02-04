@@ -54,7 +54,7 @@ export default function Services() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-4xl md:text-6xl font-bold font-display mb-6 neon-text-purple"
                 >
-                    Our Solution Stack
+                    SHUNYA Solutions
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0 }}

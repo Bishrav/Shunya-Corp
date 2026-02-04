@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SHUNYA",
+  title: "SHUNYA | Best IT Company in Nepal",
   description: "Shunya Development IT Company is the best IT company in Nepal for website building, app development, and interactive 3D experiences. We specialize in Three.js, Next.js, and futuristic digital transformation.",
   keywords: ["Shunya Development IT Company", "Shunya IT Company", "best IT company in Nepal", "best company for making website", "website building", "three js search", "website development search", "app development search in nepal", "3D website", "interactive web design"],
   metadataBase: new URL('https://www.shunya.com.np'), // Replace with actual domain
@@ -84,11 +84,17 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "SHUNYA",
+              "alternateName": ["Shunya Development IT Company", "Shunya IT", "Shunya Nepal"],
               "url": "https://www.shunya.com.np",
-              "logo": "https://www.shunya.com.np/logo.jpeg",
-              "description": "Best IT company in Nepal for website and app development, specializing in Three.js and interactive digital experiences.",
+              "logo": "https://www.shunya.com.np/logo.png",
+              "description": "SHUNYA is the best IT company in Nepal specializing in interactive 3D websites, AI, and digital transformation.",
+              "brand": {
+                "@type": "Brand",
+                "name": "SHUNYA"
+              },
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Kathmandu",
                 "addressLocality": "Kathmandu",
                 "addressCountry": "NP"
               },
