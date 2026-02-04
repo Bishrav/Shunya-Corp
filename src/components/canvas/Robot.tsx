@@ -6,7 +6,7 @@ import { SkeletonUtils } from 'three-stdlib';
 import * as THREE from 'three';
 
 // Robot model URL
-const MODEL_URL = "/models/RobotExpressive.glb";
+const MODEL_URL = "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/models/gltf/RobotExpressive/RobotExpressive.glb";
 
 type RobotProps = {
     action?: string; // Action to play
