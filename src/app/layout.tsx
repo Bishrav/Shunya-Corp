@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     icon: '/logo.jpeg',
     shortcut: '/logo.jpeg',
     apple: '/logo.jpeg',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/logo.jpeg',
+    },
   },
 };
 
