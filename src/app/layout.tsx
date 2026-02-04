@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SHUNYA | Best IT Company for Website & App Development in Nepal",
+  title: "SHUNYA",
   description: "SHUNYA is the best IT company in Nepal for website building, app development, and interactive 3D experiences. We specialize in Three.js, Next.js, and futuristic digital transformation.",
   keywords: ["best IT company in Nepal", "best company for making website", "website building", "three js search", "website development search", "app development search in nepal", "3D website", "interactive web design"],
   metadataBase: new URL('https://www.shunya.com.np'), // Replace with actual domain
