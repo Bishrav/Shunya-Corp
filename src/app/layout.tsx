@@ -54,6 +54,7 @@ export const metadata: Metadata = {
 import { Navbar } from "@/components/ui/Navbar";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { Footer } from "@/components/ui/Footer";
+import { Chatbot } from "@/components/ui/Chatbot";
 
 export default function RootLayout({
   children,
@@ -75,6 +76,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Chatbot />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
