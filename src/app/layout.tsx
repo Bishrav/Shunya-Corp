@@ -16,14 +16,37 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "SHUNYA | Engineering Interactive Digital Realities",
   description: "SHUNYA is a technology studio specializing in interactive 3D websites, AI, and futuristic digital transformation.",
+  metadataBase: new URL('https://www.shunya.com.np'), // Replace with actual domain
   icons: {
-    icon: [
-      { url: '/logo.jpeg', sizes: 'any', type: 'image/jpeg' },
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo.jpeg', // Apple touch icons generally prefer png/jpeg, leaving as high-res logo
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/logo.jpeg',
+    },
+  },
+  openGraph: {
+    title: "SHUNYA | Engineering Interactive Digital Realities",
+    description: "SHUNYA is a technology studio specializing in interactive 3D websites, AI, and futuristic digital transformation.",
+    url: 'https://www.shunya.com.np',
+    siteName: 'SHUNYA',
+    images: [
+      {
+        url: '/logo.jpeg', // Using the high-res logo for social sharing
+        width: 800,
+        height: 800,
+        alt: 'SHUNYA Logo',
+      },
     ],
-    shortcut: ['/logo.jpeg'],
-    apple: [
-      { url: '/logo.jpeg', sizes: '180x180', type: 'image/jpeg' },
-    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "SHUNYA | Engineering Interactive Digital Realities",
+    description: "SHUNYA is a technology studio specializing in interactive 3D websites, AI, and futuristic digital transformation.",
+    images: ['/logo.jpeg'],
   },
 };
 
