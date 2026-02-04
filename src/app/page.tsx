@@ -27,7 +27,7 @@ export default function Home() {
         <div className="w-full md:w-1/2 text-center md:text-left px-6">
           <TextReveal>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              Leading <span className="text-shunya-cyan">IT Related Company</span>
+              <span className="text-shunya-cyan">Shunya Development IT Company</span>
             </h2>
           </TextReveal>
           <TextReveal>

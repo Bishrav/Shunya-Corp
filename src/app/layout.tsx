@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SHUNYA | Best IT Company in Nepal",
+  title: "Shunya Development IT Company | Best IT Company in Nepal",
   description: "Shunya Development IT Company is the best IT company in Nepal for website building, app development, and interactive 3D experiences. We specialize in Three.js, Next.js, and futuristic digital transformation.",
   keywords: ["IT related company", "Best IT company in Nepal", "IT Company Kathmandu", "Technology Company Nepal", "Shunya Development IT Company", "Shunya IT Company", "best company for making website", "website building", "three js search", "website development search", "app development search in nepal", "3D website", "interactive web design"],
   metadataBase: new URL('https://www.shunya.com.np'), // Replace with actual domain
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "SHUNYA | Engineering Interactive Digital Realities",
     description: "SHUNYA is a technology studio specializing in interactive 3D websites, AI, and futuristic digital transformation.",
     url: 'https://www.shunya.com.np',
-    siteName: 'SHUNYA',
+    siteName: 'Shunya Development IT Company',
     images: [
       {
         url: '/logo.jpeg', // Using the high-res logo for social sharing
