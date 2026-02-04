@@ -10,7 +10,11 @@ const MODEL_URL = "https://raw.githubusercontent.com/mrdoob/three.js/master/exam
 
 type RobotProps = {
     action?: string; // Action to play
+<<<<<<< HEAD
     [key: string]: unknown; // Other props (position, scale, etc.)
+=======
+    [key: string]: any; // Other props (position, scale, etc.)
+>>>>>>> 643c41140b92895d7197f03b402c6d144c3129bc
 }
 
 export function Robot({ action = 'Walking', ...props }: RobotProps) {
@@ -47,7 +51,10 @@ export function Robot({ action = 'Walking', ...props }: RobotProps) {
         // Some might be oneshots (Jump), but usually standard behavior is fine or controlled by parent resetting to Idle.
         // For continuous control, we usually want looping.
         if (['Death', 'Sitting', 'Standing'].includes(currentActionName)) {
+<<<<<<< HEAD
             // eslint-disable-next-line
+=======
+>>>>>>> 643c41140b92895d7197f03b402c6d144c3129bc
             newAction.clampWhenFinished = true;
             newAction.loop = THREE.LoopOnce;
         } else if (['Jump', 'Punch', 'Yes', 'No', 'Wave', 'ThumbsUp'].includes(currentActionName)) {
