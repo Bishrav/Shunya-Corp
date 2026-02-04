@@ -31,38 +31,37 @@ export default function Home() {
             </h2>
           </TextReveal>
           <TextReveal>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0">
-              From 3D immersive worlds to AI-driven enterprise solutions, SHUNYA bridges the gap between imagination and reality.
-            </p>
-          </TextReveal>
-        </div>
-      </section>
+            Recognized as the <strong>best IT company in Nepal</strong>, SHUNYA bridges the gap between imagination and reality with cutting-edge <strong>website building</strong>, app development, and immersive 3D experiences.
+          </p>
+        </TextReveal>
+    </div>
+      </section >
 
-      {/* Spotlight Feature */}
-      <SpotlightSection />
+    {/* Spotlight Feature */ }
+    < SpotlightSection />
 
-      {/* Robot Showcase Section */}
-      <RobotShowcase />
+    {/* Robot Showcase Section */ }
+    < RobotShowcase />
 
-      {/* 3D Flow Divider */}
-      <div className="w-full h-[300px] relative overflow-hidden bg-black">
+    {/* 3D Flow Divider */ }
+    < div className = "w-full h-[300px] relative overflow-hidden bg-black" >
         <Scene className="w-full h-full absolute inset-0">
           <EnergyWave />
         </Scene>
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <h3 className="text-9xl font-bold text-white/5 uppercase tracking-widest">Flow</h3>
         </div>
-      </div>
+      </div >
 
-      {/* Floating Technologies */}
-      <div className="w-full h-[400px] relative overflow-hidden bg-gradient-to-b from-black to-shunya-bg">
-        <Scene className="w-full h-full">
-          <FloatingTech />
-        </Scene>
-      </div>
+    {/* Floating Technologies */ }
+    < div className = "w-full h-[400px] relative overflow-hidden bg-gradient-to-b from-black to-shunya-bg" >
+      <Scene className="w-full h-full">
+        <FloatingTech />
+      </Scene>
+      </div >
 
-      {/* Our Process */}
-      <section className="py-32 px-6 container mx-auto">
+    {/* Our Process */ }
+    < section className = "py-32 px-6 container mx-auto" >
         <TextReveal>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-20 text-center">How We <span className="text-shunya-purple">Innovate</span></h2>
         </TextReveal>
@@ -81,10 +80,10 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section >
 
-      {/* Why Choose Us */}
-      <section className="py-32 px-6 container mx-auto relative">
+    {/* Why Choose Us */ }
+    < section className = "py-32 px-6 container mx-auto relative" >
         <div className="absolute left-0 top-0 w-[500px] h-[500px] bg-shunya-purple/10 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -94,9 +93,9 @@ export default function Home() {
             </TextReveal>
             <div className="space-y-8">
               {[
-                { icon: <Zap className="w-6 h-6 text-shunya-cyan" />, title: "Lightning Fast", desc: "Optimized for speed and performance." },
-                { icon: <Shield className="w-6 h-6 text-shunya-purple" />, title: "Enterprise Secure", desc: "Bank-grade security protocols." },
-                { icon: <Rocket className="w-6 h-6 text-shunya-cyan" />, title: "Future Ready", desc: "Built with scalable next-gen technologies." }
+                { icon: <Zap className="w-6 h-6 text-shunya-cyan" />, title: "Lightning Fast", desc: "Optimized website development search results with superior speed." },
+                { icon: <Shield className="w-6 h-6 text-shunya-purple" />, title: "Enterprise Secure", desc: "Bank-grade security for your app development search in Nepal." },
+                { icon: <Rocket className="w-6 h-6 text-shunya-cyan" />, title: "Future Ready", desc: "Leading the Three.js search with next-gen scalable tech." }
               ].map((feature, i) => (
                 <div key={i} className="flex gap-4 items-start">
                   <div className="p-3 glass rounded-lg">{feature.icon}</div>
@@ -121,8 +120,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
-    </div>
+    </div >
   );
 }
