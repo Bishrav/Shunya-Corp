@@ -31,20 +31,21 @@ export default function Home() {
             </h2>
           </TextReveal>
           <TextReveal>
-            Recognized as the <strong>best IT company in Nepal</strong>, SHUNYA bridges the gap between imagination and reality with cutting-edge <strong>website building</strong>, app development, and immersive 3D experiences.
-          </p>
-        </TextReveal>
-    </div>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0">
+              Recognized as the <strong>best IT company in Nepal</strong>, SHUNYA bridges the gap between imagination and reality with cutting-edge <strong>website building</strong>, app development, and immersive 3D experiences.
+            </p>
+          </TextReveal>
+        </div>
       </section >
 
-    {/* Spotlight Feature */ }
-    < SpotlightSection />
+      {/* Spotlight Feature */}
+      < SpotlightSection />
 
-    {/* Robot Showcase Section */ }
-    < RobotShowcase />
+      {/* Robot Showcase Section */}
+      < RobotShowcase />
 
-    {/* 3D Flow Divider */ }
-    < div className = "w-full h-[300px] relative overflow-hidden bg-black" >
+      {/* 3D Flow Divider */}
+      < div className="w-full h-[300px] relative overflow-hidden bg-black" >
         <Scene className="w-full h-full absolute inset-0">
           <EnergyWave />
         </Scene>
@@ -53,15 +54,15 @@ export default function Home() {
         </div>
       </div >
 
-    {/* Floating Technologies */ }
-    < div className = "w-full h-[400px] relative overflow-hidden bg-gradient-to-b from-black to-shunya-bg" >
-      <Scene className="w-full h-full">
-        <FloatingTech />
-      </Scene>
+      {/* Floating Technologies */}
+      < div className="w-full h-[400px] relative overflow-hidden bg-gradient-to-b from-black to-shunya-bg" >
+        <Scene className="w-full h-full">
+          <FloatingTech />
+        </Scene>
       </div >
 
-    {/* Our Process */ }
-    < section className = "py-32 px-6 container mx-auto" >
+      {/* Our Process */}
+      < section className="py-32 px-6 container mx-auto" >
         <TextReveal>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-20 text-center">How We <span className="text-shunya-purple">Innovate</span></h2>
         </TextReveal>
@@ -82,8 +83,8 @@ export default function Home() {
         </div>
       </section >
 
-    {/* Why Choose Us */ }
-    < section className = "py-32 px-6 container mx-auto relative" >
+      {/* Why Choose Us */}
+      < section className="py-32 px-6 container mx-auto relative" >
         <div className="absolute left-0 top-0 w-[500px] h-[500px] bg-shunya-purple/10 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
