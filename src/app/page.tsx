@@ -27,7 +27,7 @@ export default function Home() {
         <div className="w-full md:w-1/2 text-center md:text-left px-6">
           <TextReveal>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              We Build <span className="text-shunya-cyan">Digital Futures</span>
+              Leading <span className="text-shunya-cyan">IT Related Company</span>
             </h2>
           </TextReveal>
           <TextReveal>
@@ -64,7 +64,7 @@ export default function Home() {
       {/* Our Process */}
       < section className="py-32 px-6 container mx-auto" >
         <TextReveal>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-20 text-center">How We <span className="text-shunya-purple">Innovate</span></h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-20 text-center">Best <span className="text-shunya-purple">IT Company</span> Solutions</h2>
         </TextReveal>
 
         <div className="grid md:grid-cols-4 gap-8">
@@ -90,7 +90,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <TextReveal>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">Why <span className="text-shunya-cyan">SHUNYA?</span></h2>
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">Top <span className="text-shunya-cyan">IT Company</span> in Nepal</h2>
             </TextReveal>
             <div className="space-y-8">
               {[

@@ -11,7 +11,7 @@ export function Footer() {
                     <div className="col-span-1 md:col-span-2">
                         <h2 className="text-4xl font-display font-bold text-white mb-6">SHUNYA<span className="text-shunya-cyan">.</span></h2>
                         <p className="text-gray-400 max-w-sm mb-8">
-                            Engineering the digital future. We build immersive experiences that define the next generation of the web.
+                            SHUNYA is the <strong>best IT company in Kathmandu, Nepal</strong>. We engineer the digital future with immersive experiences and high-performance IT solutions.
                         </p>
                         <div className="flex gap-4">
                             {/* Social Placeholders */}
