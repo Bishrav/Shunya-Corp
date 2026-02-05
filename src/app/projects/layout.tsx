@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Our Projects | SHUNYA',
+    title: 'Our Projects',
     description: 'Explore our portfolio of interactive 3D websites, custom web apps, and digital transformation projects.',
 };
 

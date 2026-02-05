@@ -1,4 +1,10 @@
 import { ContactForm } from "@/components/ui/ContactForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact Us",
+    description: "Get in touch with Shunya Development IT Company. We are ready to build your next digital masterpiece.",
+};
 
 export default function Contact() {
     return (

@@ -14,30 +14,49 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Shunya Development IT Company | Best IT Company in Nepal",
-  description: "Shunya Development IT Company is the best IT company in Nepal for website building, app development, and interactive 3D experiences. We specialize in Three.js, Next.js, and futuristic digital transformation.",
-  keywords: ["IT related company", "Best IT company in Nepal", "IT Company Kathmandu", "Technology Company Nepal", "Shunya Development IT Company", "Shunya IT Company", "best company for making website", "website building", "three js search", "website development search", "app development search in nepal", "3D website", "interactive web design"],
-  metadataBase: new URL('https://www.shunya.com.np'), // Replace with actual domain
+  title: {
+    default: "Shunya Development IT Company | Best IT Company in Nepal",
+    template: "%s | Shunya Development IT Company",
+  },
+  description: "Shunya Development IT Company is a leading technology studio in Nepal specializing in interactive 3D websites, AI solutions, web & app development, and digital transformation. We engineer the future.",
+  keywords: [
+    "Shunya Development IT Company",
+    "Shunya IT",
+    "Best IT Company in Nepal",
+    "IT Company Kathmandu",
+    "Web Development Nepal",
+    "App Development Nepal",
+    "3D Website Design",
+    "Interactive Web Experiences",
+    "Artificial Intelligence Solutions",
+    "Digital Transformation Nepal",
+    "Software Company Nepal",
+    "Technology Studio"
+  ],
+  metadataBase: new URL('https://www.shunya.com.np'),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/logo.jpeg', // Apple touch icons generally prefer png/jpeg, leaving as high-res logo
+    apple: '/logo.png',
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: '/logo.jpeg',
+      url: '/logo.png',
     },
   },
   openGraph: {
-    title: "SHUNYA | Engineering Interactive Digital Realities",
-    description: "SHUNYA is a technology studio specializing in interactive 3D websites, AI, and futuristic digital transformation.",
+    title: "Shunya Development IT Company | Engineering Interactive Digital Realities",
+    description: "Experience the future of digital with Shunya. We build immersive 3D websites, powerful apps, and AI-driven solutions to transform your business.",
     url: 'https://www.shunya.com.np',
     siteName: 'Shunya Development IT Company',
     images: [
       {
-        url: '/logo.jpeg', // Using the high-res logo for social sharing
+        url: '/logo.png',
         width: 800,
         height: 800,
-        alt: 'SHUNYA Logo',
+        alt: 'Shunya Development IT Company Logo',
       },
     ],
     locale: 'en_US',
@@ -45,9 +64,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "SHUNYA | Engineering Interactive Digital Realities",
-    description: "SHUNYA is a technology studio specializing in interactive 3D websites, AI, and futuristic digital transformation.",
-    images: ['/logo.jpeg'],
+    title: "Shunya Development IT Company",
+    description: "Leading IT Company in Nepal for 3D Websites, AI, and App Development.",
+    images: ['/logo.png'],
+  },
+  verification: {
+    google: '0svthPazotv4Fg9nU_NDz1HqnBVafE6ogwOWHcjyHrk',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -83,15 +116,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "SHUNYA",
-              "alternateName": ["Shunya Development IT Company", "Shunya IT", "Shunya Nepal"],
+              "name": "Shunya Development IT Company",
+              "alternateName": ["Shunya IT", "Shunya Nepal", "SHUNYA"],
               "url": "https://www.shunya.com.np",
               "logo": "https://www.shunya.com.np/logo.png",
-              "description": "SHUNYA is the best IT company in Nepal specializing in interactive 3D websites, AI, and digital transformation.",
-              "brand": {
-                "@type": "Brand",
-                "name": "SHUNYA"
-              },
+              "description": "Shunya Development IT Company is the best IT company in Nepal specializing in interactive 3D websites, AI, and digital transformation.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Kathmandu",
@@ -101,7 +130,9 @@ export default function RootLayout({
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+977-9840700349",
-                "contactType": "customer service"
+                "contactType": "customer service",
+                "areaServed": "NP",
+                "availableLanguage": "en"
               },
               "sameAs": [
                 "https://www.facebook.com/shunya",
